@@ -1,52 +1,80 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# README - Meu Repositório React com Tailwind CSS
+Este é um exemplo de um README para um repositório React com o uso do framework Tailwind CSS. Este README irá fornecer um guia básico sobre como configurar e usar o repositório.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Pré-requisitos
 
-## Available Scripts
+Certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 
-In the project directory, you can run:
+- Node.js: O Node.js é necessário para executar aplicativos React.
 
-### `npm start`
+- npm ou Yarn: Escolha um gerenciador de pacotes JavaScript.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Create React App: Você pode instalá-lo globalmente usando npm ou yarn.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Como Iniciar
 
-### `npm test`
+Siga as etapas abaixo para iniciar o projeto:
+<!-- passo 1 -->
+1. Clone este repositório:
+    
+    ```bash
+    git clone https://github.com/seu-usuario/seu-repo-react-tailwind.git
+    ```
+2. Acesse a pasta do projeto:
+        
+    ```bash
+    cd website
+    ```
+3. Instale as dependências:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Se você estiver usando npm:
+    ```bash
+    npm install
+    ```
+    Se você estiver usando yarn:
+    ```bash
+    yarn
+    ```
+4. Inicie o servidor de desenvolvimento:
+    Se você estiver usando npm:
+    ```bash
+    npm start
+    ```
+    Se você estiver usando yarn:
+    ```bash
+    yarn start
+    ```
+Isso iniciará o servidor de desenvolvimento e abrirá o aplicativo no seu navegador padrão. Qualquer alteração nos arquivos será refletida automaticamente no navegador.
 
-### `npm run build`
+## Como Contribuir ?
+Se desejar contribuir para este projeto, siga estas etapas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Faça um fork deste repositório.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Clone o repositório forked no seu ambiente local.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Crie uma nova branch para suas alterações:
+```bash
+git checkout -b minha-feature
+```
 
-### `npm run eject`
+### 4. Faça as alterações desejadas.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 5. Faça um commit das alterações:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git commit -m "Adicionei novos recursos"
+```
+### 6. Envie as alterações para o seu repositório no GitHub:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+git push origin minha-feature
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 7. Crie um pull request neste repositório original explicando suas alterações.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Licença
+Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter detalhes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-=======
-# Website
-Repositório para site do projeto
-Link do projeto no Figma: https://www.figma.com/file/3EXO5aRZw1XC9LCcnKYZ1T/Site-do-Projeto?type=design&node-id=0%3A1&mode=design&t=ig3mzRwQ8pflQTVj-1
->>>>>>> c3c303190a5b77472ba8d0438ed04c652475cba9
+Aproveite o desenvolvimento do seu aplicativo React com Tailwind CSS! Se tiver alguma dúvida ou precisar de ajuda adicional, sinta-se à vontade para entrar em contato.

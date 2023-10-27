@@ -1,33 +1,32 @@
-const Footer = () => { //A primeira div feita é bagunça para aumentar a distacia do footer para o resto da página
+import { BsInstagram } from 'react-icons/bs';
+import { HiOutlineMail } from 'react-icons/hi';
+const Footer = () => {
     return (
-        <div className="pt-40"> 
-            <footer className="bg-[#04081D]">
-                <div className="grid grid-cols-12 py-6 h-44 mx-10">
-                    <div className="col-span-3 flex justify-center">
-                        <img src="/LogoFooter.png"></img>
+        <footer className="bg-[#04081D] text-white mt-60">
+            <div className="grid grid-cols-6 py-6 h-64 mx-10 items-center">
+                <div className="col-span-2 flex h-40">
+                    <img src="/Logo_m1.svg"></img>
+                </div>
+                <div className="col-span-2 flex flex-col text-white justify-center gap-5">
+                    <h3 className="text-center">Contato</h3>
+                    <div className="flex items-center gap-2">
+                        <HiOutlineMail size={30}/>
+                        <p className="w-1/2">escolapilotodecomputacao@gmail.com</p>
                     </div>
-                    <div className="col-span-6 text-[#FFFFFF] grid grid-rows-5 h-32">
-                        <h3 className="text-center">Contato</h3>
-                        <div className="row-start-3 flex justify-center gap-x-4">
-                            <img src="/Email.svg" className="w-8 h-6"></img>
-                            <p className="w-1/2">escolapilotodecomputacao@gmail.com</p>
-                        </div>
-                        <div className="row-start-6 flex justify-center gap-x-4">
-                            <img src="/Instagram.svg" className="w-8"></img>
-                            <a href="https://www.instagram.com/epc_ufersa/#" className="w-1/2 h-6">@epc_ufersa</a>
-                        </div>
-                    </div>
-                    <div className="col-span-3 grid grid-rows-6 h-32">
-                        <h3 className="text-center">Localização</h3>
-                        <img src="/Localizacao.svg" className="row-start-2 row-end-3 "></img>
-                        <p className="text-center row-start-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, maiores vero ad fuga. Temporibus, repudiandae.</p>
+                    <div className="flex items-center gap-2">
+                        <BsInstagram size={30}/>
+                        <a href="https://www.instagram.com/epc_ufersa/#" className="w-1/2 h-6">@epc_ufersa</a>
                     </div>
                 </div>
-            </footer>
-        </div>
+                <div className="col-span-2 flex items-center flex-col justify-center gap-5">
+                    <h3 className="">Localização</h3>
+                    <img src="/Localizacao.svg" className=""></img>
+                    <p className="">Av. Francisco Mota, 572 - Bairro Costa e Silva, Mossoró RN | CEP: 59.625-900, +55 84 3317-8200 CNPJ: 24.529.265/0001-40</p>
+                </div>
+            </div>
+        </footer>
     );
 };
 
-//falta mudar a fonte e cor do texto, linha 22 (colocar imagem no meio)
 
 export default Footer;
