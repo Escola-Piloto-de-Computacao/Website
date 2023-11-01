@@ -2,7 +2,7 @@ import { BsInstagram } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 const Footer = () => {
     return (
-        <footer className="bg-[#04081D] text-white mt-60">
+        <footer className="bg-[#04081D] text-white">
             <div className="grid grid-cols-6 py-6 h-64 mx-10 items-center">
                 <div className="col-span-2 flex h-40">
                     <img src="/Logo_m1.svg"></img>
