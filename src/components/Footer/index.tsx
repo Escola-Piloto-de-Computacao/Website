@@ -1,5 +1,6 @@
 import { BsInstagram } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
+
 const Footer = () => {
     return (
         <footer className="bg-[#04081D] text-white">
