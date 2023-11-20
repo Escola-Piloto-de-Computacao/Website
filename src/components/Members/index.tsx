@@ -4,7 +4,7 @@ import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 let membros = [
    {
       nome: "Pedro Figueira",
-      cargo: "Bolsista",
+      cargo: "",
       email: "pedrofigueiraboaviagem@gmail.com",
       twitter: "",
       linkedin: "",
@@ -13,14 +13,14 @@ let membros = [
       foto: "https://source.unsplash.com/100x100/?portrait?0"
    },
    {
-      nome: "pessoa EPC2",
-      cargo: "Programador",
-      email: "",
+      nome: "João Victor",
+      cargo: "",
+      email: "jvictorsilva65@gmail.com",
       twitter: "",
       linkedin: "",
       github: "",
-      instagram: "",
-      foto: "https://source.unsplash.com/100x100/?portrait?1"
+      instagram: "https://www.instagram.com/jeivizz/",
+      foto: "/MemberPhotos/Victor.jpeg"
    }
 ];
 
@@ -30,10 +30,10 @@ const Members = () => {
    //fazer mapping fora do return e gerar sociais do memebro de acordo com o que ele tem
 
    return (
-      <section className="py-12 mt-32" id="Members">
-         <div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
-            <p className="p-2 text-lg font-medium tracki text-center uppercase pt-20">Membros EPC</p>
-            <h1 className="text-4xl font-bold leadi text-center sm:text-5xl">A equipe talentosa por trás do projeto</h1>
+      <section className="py-12 mt-32 h-full xsm:pt-64 pt-0 pb-20" id="Members">
+         <div className="container flex flex-col items-center justify-center px-12 lg:p-4 mx-auto sm:p-10">
+            <p className="p-2 text-base lg:text-lg font-medium tracki text-center uppercase pt-20">Membros EPC</p>
+            <h1 className="text-3xl lg:text-4xl font-bold leadi text-center pb-6 lg:pb-2">A equipe talentosa por trás do projeto</h1>
             <div className="flex flex-row flex-wrap-reverse justify-center mt-8">
                {membros.map(membro => (
                   <div key={membro.nome} className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-[#1F2937] text-white">
@@ -43,16 +43,13 @@ const Members = () => {
                         <p>{membro.cargo}</p>
                      </div>
                      <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
-                        <a href={`mailto:${membro.email}`} title="Email" className="hover:text-violet-400">
+                        <a href={`mailto:${membro.email}`} title="Email" className="hover:text-sky-400" target="_blank" rel="noopener noreferrer">
                            <MdEmail size={25} />
                         </a>
-                        <a href={membro.twitter} title="Twitter" className="hover:text-violet-400">
-                           <BsTwitter size={25} />
-                        </a>
-                        <a href={membro.linkedin} title="LinkedIn" className="hover:text-violet-400">
+                        <a href={membro.linkedin} title="LinkedIn" className="hover:text-sky-400" target="_blank" rel="noopener noreferrer">
                            <BsLinkedin size={25} />
                         </a>
-                        <a href={membro.github} title="GitHub" className="hover:text-violet-400">
+                        <a href={membro.github} title="Github" className=" hover:text-sky-400" target="_blank" rel="noopener noreferrer">
                            <BsGithub size={25} />
                         </a>
                      </div>
