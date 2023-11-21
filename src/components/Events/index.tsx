@@ -27,7 +27,7 @@ const numEventos = eventos.length;
 
 const Events = () => {
    return (
-      <div className="grid justify-center lg:h-screen">
+      <div className="grid justify-center lg:h-screen lg:pb-5">
          <div className="grid justify-center items-end" id="Events">
             <h1 className="text-3xl lg:text-5xl font-semibold lg:font-normal text-center mt-28">Eventos</h1>
          </div>
