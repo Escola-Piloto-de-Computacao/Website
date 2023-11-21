@@ -2,6 +2,7 @@ import { MdHome } from "react-icons/md";
 import { FaLightbulb } from "react-icons/fa6";
 import { MdEvent } from "react-icons/md";
 import { IoPeopleSharp } from "react-icons/io5";
+import Hamburger from "../Hamburger";
 
 export const refs = [
    {
@@ -28,8 +29,12 @@ export const refs = [
 
 const Header = () => {
    return (
-      <header className="hidden lg:flex justify-center lg:pt-6">
-         <div className="flex items-center justify-between fixed bg-gray-200 w-3/4 z-10 rounded-2xl">
+      <header className="lg:flex lg:justify-center lg:pt-4">
+         <Hamburger />
+         <div className="lg:hidden flex justify-end mt-4 px-6">    
+            <img src="/epc-icon-semfundo.png" alt="Logo da EPC" className="w-11 mr-2 " />
+         </div>
+         <div className="hidden lg:flex items-center justify-between fixed bg-gray-200 w-3/4 z-10 rounded-xl">
             <div className="flex items-center gap-7 ml-10 py-3">
                <img src="/Logo.svg" alt="Logo da EPC" />
             </div>

@@ -1,63 +1,59 @@
-import { useClickAway } from "react-use";
-import { useRef } from "react";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Squash } from "hamburger-react";
-import { refs } from "../Header";
 
-export const Hamburger = () => {
-   const [isOpen, setOpen] = useState(false);
-   const ref = useRef(null);
+const Hamburger = () => {
 
-   useClickAway(ref, () => setOpen(false));
+   const [isNavOpen, setIsNavOpen] = useState(false);
 
    return (
-      <div ref={ref} className="lg:hidden m-2">
-         <Squash toggled={isOpen} size={35} toggle={setOpen}/>
-         <AnimatePresence>
-            {isOpen && (
-               <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="fixed left-0 shadow-4xl right-0 top-[3.5rem] p-5 pt-0 bg-neutral-950 border-b border-b-white/20"
-               >
-                  <ul className="grid gap-2">
-                     {refs.map((route, idx) => {
-                        const { Icon } = route;
+      <section className="fixed flex lg:hidden mt-5">
+         <div
+            className="space-y-2 pl-8"
+            onClick={() => setIsNavOpen((prev) => !prev)}
+         >
+            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+         </div>
 
-                        return (
-                           <motion.li
-                              initial={{ scale: 0, opacity: 0 }}
-                              animate={{ scale: 1, opacity: 1 }}
-                              transition={{
-                                 type: "spring",
-                                 stiffness: 260,
-                                 damping: 20,
-                                 delay: 0.1 + idx / 10,
-                              }}
-                              key={route.title}
-                              className="w-full p-[0.08rem] rounded-xl bg-gradient-to-tr from-neutral-800 via-neutral-950 to-neutral-700"
-                           >
-                              <a
-                                 onClick={() => setOpen((prev) => !prev)}
-                                 className={
-                                    "flex items-center justify-between w-full p-5 rounded-xl bg-neutral-950"
-                                 }
-                                 href={route.href}
-                              >
-                                 <span className="flex gap-1 text-lg">{route.title}</span>
-                                 <Icon className="text-xl" />
-                              </a>
-                           </motion.li>
-                        );
-                     })}
-                  </ul>
-               </motion.div>
-            )}
-         </AnimatePresence>
-      </div>
+         {isNavOpen && (
+            <div className="fixed inset-0 bg-gray-300 opacity-75 z-10"></div>
+         )}
+
+         <div className={`absolute py-8 z-20 ${isNavOpen ? "flex flex-col col-span-1 h-screen w-screen" : "hidden"}`}>
+            <div className="flex justify-center">
+               <svg
+                  className="h-12 w-12 text-gray-600 cursor-pointer"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  onClick={() => setIsNavOpen(false)}
+               >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+               </svg>
+            </div>
+            <ul className="text-center min-h-[350px] mt-24 uppercase text-xl font-bold">
+               <li className="my-14 cursor-pointer">
+                  <a href="#Home" onClick={() => setIsNavOpen(false)}>Home</a>
+               </li>
+               <li className="my-14 cursor-pointer">
+                  <a href="#AboutUs" onClick={() => setIsNavOpen(false)}>Sobre nós</a>
+               </li>
+               <li className="my-14 cursor-pointer">
+                  <a href="#Events" onClick={() => setIsNavOpen(false)}>Eventos</a>
+               </li>
+               <li className="my-14 cursor-pointer">
+                  <a href="#Members" onClick={() => setIsNavOpen(false)}>Membros</a>
+               </li>
+            </ul>
+            <div className="flex justify-center pt-12">
+               <img className="w-3/12" src="epc-semfundo.png" />
+            </div>
+         </div>
+      </section>
    );
 };
 

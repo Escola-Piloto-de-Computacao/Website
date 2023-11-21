@@ -22,7 +22,7 @@ const LerMais: React.FC<info> = (props) => {
             button={{ style: { width: buttonWidth, borderColor: 'transparent'}, }}>
             <div className="flex justify-end">
                 <Popover placement="right" title={text} content={content}>
-                    <Button className="text-blue-700">ler mais &gt;</Button>
+                    <Button className="text-blue-700">ler tudo &gt;</Button>
                 </Popover>
             </div>
         </ConfigProvider>

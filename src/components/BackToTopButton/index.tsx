@@ -4,10 +4,12 @@ const BackToTopButton = () => {
    return (
       <ConfigProvider
          theme={{
-            components: {
-               FloatButton: {
-                  zIndexPopup: 10,
-               },
+            token: {
+               fontSizeIcon: 22,
+               controlHeightLG: 56,
+
+               colorFillContent: "rgba(0, 146, 233, 0.8)",
+               colorBgElevated: "rgba(0, 146, 233, 0.8)",
             },
          }}
       >

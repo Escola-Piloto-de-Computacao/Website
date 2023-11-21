@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LerMais from "./LerMais";
 
 interface CardProps {
@@ -8,10 +8,9 @@ interface CardProps {
    EventSiteLink: string;
 }
 
-const tamanhoMaxTexto = 230;
-
 const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardProps) => {
    const [showFullDescription] = useState(false);
+   const [tamanhoMaxTexto, setTamanhoMaxTexto] = useState(230);
 
    let shortenedDescription = EventDescription;
    if (EventDescription.length > tamanhoMaxTexto && !showFullDescription) {
@@ -26,10 +25,27 @@ const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardPr
       }
    }
 
+   useEffect(() => {
+      const changeMaxTextSize = () => {
+         if (window.innerWidth < 800) {
+            setTamanhoMaxTexto(135);
+         } else {
+            setTamanhoMaxTexto(230);
+         }
+      };
+
+      changeMaxTextSize();
+
+      window.addEventListener('resize', changeMaxTextSize);
+      return () => {
+         window.removeEventListener('resize', changeMaxTextSize);
+      };
+   }, []);
+
    return (
-      <div className="grid justify-center pb-20 lg:pb-0">
-         <div className="grid bg-slate-300 w-[400px] p-6 rounded-2xl">
-            <div className="flex justify-center pb-7">
+      <div className="grid justify-center pb-20 lg:pb-0 justify-items-center">
+         <div className="grid bg-slate-300 w-[400px] xxsm:w-3/4 p-6 rounded-2xl">
+            <div className="flex justify-center pb-7 xxsm:w-3/4 mx-auto">
                <img src={ImageEvent} alt={ImageEvent} />
             </div>
             <div className="flex justify-center">

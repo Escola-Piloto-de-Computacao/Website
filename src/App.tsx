@@ -1,6 +1,5 @@
 import AboutUs from "./components/Aboutus";
 import Header from "./components/Header";
-import Hamburger from "./components/Hamburger";
 import Introduction from "./components/Introduction";
 import Events from "./components/Events";
 import Footer from "./components/Footer";
@@ -13,7 +12,6 @@ function App() {
    return (
       <div className="" >
          <Header />
-         <Hamburger />
          <Introduction />
          <AboutUs />
          <Events />

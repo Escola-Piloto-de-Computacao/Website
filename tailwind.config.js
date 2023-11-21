@@ -11,6 +11,9 @@ module.exports = {
             'tertiary': '#3F3F3F',
          },
          screens: {
+            'xxsm': { 'max': '415px' },
+            // @media (max-width: 415px) {...}
+
             'xsm': { 'max': '639px' },
             // @media (min-width: 640px) {...}
          }

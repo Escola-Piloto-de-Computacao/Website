@@ -2,7 +2,7 @@ import Card from './Card';
 
 //TODO fix the websites links
 
-let eventos = [
+const eventos = [
    {
       NameEvent: "CAPCOM",
       DescriptionEvent: "A Semana de Capacitação em Computação da Ufersa promove minicursos de extensão para alunos da UFERSA. Os cursos abrangem tecnologias essenciais, ministrados em sua maioria por alunos do curso. As aulas acontecerão de 29 de novembro a 01 de dezembro, das 14:00PM às 18:00PM, visando complementar a formação dos estudantes. Os tópicos incluem Web Development, Unity, Git, Laravel, PowerBI, Python, R, e Robótica. Essa iniciativa visa enriquecer o conhecimento dos alunos e proporcionar experiência em ensino. Junte-se a nós para adentrar mais ainda no mundo de ciência da computação!",
@@ -23,13 +23,15 @@ let eventos = [
    }*/
 ]
 
+const numEventos = eventos.length;
+
 const Events = () => {
    return (
-      <div className="grid justify-center h-screen">
+      <div className="grid justify-center lg:h-screen">
          <div className="grid justify-center items-end" id="Events">
-            <h1 className="text-3xl lg:text-5xl font-semibold lg:font-normal leadi text-center mt-28">Eventos</h1>
+            <h1 className="text-3xl lg:text-5xl font-semibold lg:font-normal text-center mt-28">Eventos</h1>
          </div>
-         <div className="flex flex-wrap lg:grid pt-10 justify-center lg:gap-28 lg:grid-cols-2"> {/*TODO fix the grid to make it escalable*/}
+         <div className="grid grid-cols-1 lg:flex lg:flex-wrap pt-10 lg:justify-evenly lg:w-[99vw]"> {/*TODO fix the grid to make it escalable*/}
             {eventos.map((event, index) => {
                return (
                   <Card key={index}

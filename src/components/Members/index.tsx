@@ -21,28 +21,66 @@ let membros = [
       github: "",
       instagram: "https://www.instagram.com/jeivizz/",
       foto: "/MemberPhotos/Victor.jpeg"
+   },
+   {
+      nome: "Wender Enzo",
+      cargo: "",
+      email: "",
+      twitter: "",
+      linkedin: "",
+      github: "",
+      instagram: "",
+      foto: "https://source.unsplash.com/100x100/?portrait?0"
+   },
+   {
+      nome: "Joás",
+      cargo: "",
+      email: "",
+      twitter: "",
+      linkedin: "",
+      github: "",
+      instagram: "",
+      foto: "https://source.unsplash.com/100x100/?portrait?0"
+   },
+   {
+      nome: "Lucas",
+      cargo: "",
+      email: "",
+      twitter: "",
+      linkedin: "",
+      github: "",
+      instagram: "",
+      foto: "https://source.unsplash.com/100x100/?portrait?0"
+   },
+   {
+      nome: "Clara",
+      cargo: "",
+      email: "",
+      twitter: "",
+      linkedin: "",
+      github: "",
+      instagram: "",
+      foto: "https://source.unsplash.com/100x100/?portrait?0"
    }
 ];
 
 
 const Members = () => {
 
-   //fazer mapping fora do return e gerar sociais do memebro de acordo com o que ele tem
-
    return (
-      <section className="py-12 mt-32 h-full xsm:pt-64 pt-0 pb-20" id="Members">
-         <div className="container flex flex-col items-center justify-center px-12 lg:p-4 mx-auto sm:p-10">
-            <p className="p-2 text-base lg:text-lg font-medium tracki text-center uppercase pt-20">Membros EPC</p>
-            <h1 className="text-3xl lg:text-4xl font-bold leadi text-center pb-6 lg:pb-2">A equipe talentosa por trás do projeto</h1>
+      <section className="py-12 lg:py-36 mt-5 lg:mt-24 lg:min-h-screen" id="Members">
+         <div className="container flex flex-col items-center justify-center px-12 p-4 mx-auto">
+            <p className="p-2 text-lg font-medium tracki text-center uppercase">Membros EPC</p>
+            <h1 className="text-4xl font-bold text-center pb-6">A equipe talentosa por trás do projeto</h1>
             <div className="flex flex-row flex-wrap-reverse justify-center mt-8">
                {membros.map(membro => (
-                  <div key={membro.nome} className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-[#1F2937] text-white">
+                  <div key={membro.nome} className="flex flex-col justify-center px-8 mx-6 my-12 text-center rounded-md w-80 bg-[#1F2937] text-white">
                      <img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src={membro.foto} />
                      <div className="flex-1 my-4">
-                        <p className="text-xl font-semibold leadi">{membro.nome}</p>
+                        <p className="text-xl font-semibold">{membro.nome}</p>
                         <p>{membro.cargo}</p>
                      </div>
-                     <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
+                     <div className="flex items-center justify-center p-3 space-x-4 border-t-2">
                         <a href={`mailto:${membro.email}`} title="Email" className="hover:text-sky-400" target="_blank" rel="noopener noreferrer">
                            <MdEmail size={25} />
                         </a>
