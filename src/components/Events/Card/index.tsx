@@ -8,6 +8,23 @@ interface CardProps {
    EventSiteLink: string;
 }
 
+const eventImageGenerator = (image: string) => {
+   if (image === "") {
+      return (
+         <div className="flex justify-center mx-auto pt-36 pb-36">
+            <p className="text-xl">Em breve...</p>
+         </div>
+      );
+   } else {
+      return (
+         <div className="flex justify-center pb-7 xxsm:w-3/4 mx-auto">
+            <img src={image} alt="Logo evento" />
+         </div>
+      );
+   
+   }
+};
+
 const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardProps) => {
    const [showFullDescription] = useState(false);
    const [tamanhoMaxTexto, setTamanhoMaxTexto] = useState(230);
@@ -45,9 +62,7 @@ const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardPr
    return (
       <div className="grid justify-center pb-20 lg:pb-0 justify-items-center">
          <div className="grid bg-slate-300 w-[400px] xxsm:w-3/4 p-6 rounded-2xl">
-            <div className="flex justify-center pb-7 xxsm:w-3/4 mx-auto">
-               <img src={ImageEvent} alt="Logo evento" />
-            </div>
+            {eventImageGenerator(ImageEvent as string)}
             <div className="flex justify-center">
                <p className="text-3xl font-semibold">{EventName}</p>
             </div>

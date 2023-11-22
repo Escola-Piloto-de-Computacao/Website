@@ -1,6 +1,7 @@
 import Card from './Card';
 import capcomlogo from '../../Assets/CapcomLogo.png';
 import wtcclogo from '../../Assets/WTCClogo.svg';
+import lollogo from '../../Assets/LOLlogo.png';
 
 //TODO fix the websites links
 
@@ -17,12 +18,12 @@ const eventos = [
       ImageEvent: wtcclogo,
       EventSiteLink: "",
    },
-   /*{
+   {
       NameEvent: "2º Campeonato de LOL",
       DescriptionEvent: "em breve...",
       ImageEvent: "",
-      EventSiteLink: "https://bing.com",
-   }*/
+      EventSiteLink: "",
+   }
 ]
 
 const numEventos = eventos.length;
