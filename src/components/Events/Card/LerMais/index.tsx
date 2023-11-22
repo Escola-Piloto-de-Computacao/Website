@@ -12,7 +12,7 @@ const LerMais: React.FC<info> = (props) => {
     const text = <span>{props.titulo}</span>;
 
     const content = (
-        <div className="w-56 text-justify">
+        <div className="w-56 text-justify text-base">
             <p>{props.descricao}</p>
         </div>
     );
