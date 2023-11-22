@@ -1,3 +1,5 @@
+import team from '../../Assets/Team.svg';
+
 const Introduction = () => {
 
    const handleButtonClick = () => {
@@ -17,7 +19,7 @@ const Introduction = () => {
             </div>
          </div>
          <div className="lg:col-span-6 hidden lg:flex justify-center items-center">
-            <img src="/Team.svg" alt="" className="w-3/4" />
+            <img src={team} alt="" className="w-3/4" />
          </div>
       </section>
    );

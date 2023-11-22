@@ -1,8 +1,10 @@
+import pana from '../../Assets/pana.svg';
+
 const AboutUs = () => {
    return (
       <section className="lg:grid lg:grid-cols-12 lg:h-screen pt-32 lg:pt-0 xsm:mx-6 lg:mx-10" id="AboutUs">
          <div className="lg:col-start-2 lg:col-span-5 hidden lg:flex lg:justify-center lg:items-center">
-            <img src="/Pana.svg" alt="" className="w-3/4" />
+            <img src={pana} alt="" className="w-3/4" />
          </div>
          <div className="lg:col-start-8 lg:col-span-5 flex flex-col justify-center">
             <h1 className="text-3xl lg:text-5xl font-semibold lg:font-normal w-auto text-center lg:text-left">Sobre Nós</h1>

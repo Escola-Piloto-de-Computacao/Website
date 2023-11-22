@@ -3,6 +3,8 @@ import { FaLightbulb } from "react-icons/fa6";
 import { MdEvent } from "react-icons/md";
 import { IoPeopleSharp } from "react-icons/io5";
 import Hamburger from "../Hamburger";
+import epciconsemfundo from '../../Assets/epc-icon-semfundo.png';
+import logo from '../../Assets/Logo.svg';
 
 export const refs = [
    {
@@ -32,11 +34,11 @@ const Header = () => {
       <header className="lg:flex lg:justify-center lg:pt-4">
          <Hamburger />
          <div className="lg:hidden flex justify-end mt-4 px-6">    
-            <img src="/epc-icon-semfundo.png" alt="Logo da EPC" className="w-11 mr-2 " />
+            <img src={epciconsemfundo} alt="Logo da EPC" className="w-11 mr-2 " />
          </div>
          <div className="hidden lg:flex items-center justify-between fixed bg-gray-200 w-3/4 z-10 rounded-xl">
             <div className="flex items-center gap-7 ml-10 py-3">
-               <img src="/Logo.svg" alt="Logo da EPC" />
+               <img src={logo} alt="Logo da EPC" />
             </div>
             <div className="flex gap-24 font-semibold text-xl mr-10">
                {refs.map((ref) => (
