@@ -16,13 +16,13 @@ const Hamburger = () => {
          </div>
 
          {isNavOpen && (
-            <div className="fixed inset-0 bg-gray-900 opacity-75 z-20"></div>
+            <div className="fixed inset-0 bg-black opacity-75 z-20"></div>
          )}
 
          <div className={`absolute py-8 z-20 ${isNavOpen ? "flex flex-col col-span-1 h-screen w-screen" : "hidden"}`}>
             <div className="flex justify-center">
                <svg
-                  className="h-12 w-12 text-gray-600 cursor-pointer"
+                  className="h-12 w-12 text-white cursor-pointer"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="black"
@@ -37,16 +37,16 @@ const Hamburger = () => {
             </div>
             <ul className="text-center min-h-[350px] mt-24 uppercase text-xl font-bold">
                <li className="my-14 cursor-pointer">
-                  <a href="#Home" onClick={() => setIsNavOpen(false)}>Home</a>
+                  <a href="#Home" onClick={() => setIsNavOpen(false)} className="text-white">Home</a>
                </li>
                <li className="my-14 cursor-pointer">
-                  <a href="#AboutUs" onClick={() => setIsNavOpen(false)}>Sobre nós</a>
+                  <a href="#AboutUs" onClick={() => setIsNavOpen(false)} className="text-white">Sobre nós</a>
                </li>
                <li className="my-14 cursor-pointer">
-                  <a href="#Events" onClick={() => setIsNavOpen(false)}>Eventos</a>
+                  <a href="#Events" onClick={() => setIsNavOpen(false)} className="text-white">Eventos</a>
                </li>
                <li className="my-14 cursor-pointer">
-                  <a href="#Members" onClick={() => setIsNavOpen(false)}>Membros</a>
+                  <a href="#Members" onClick={() => setIsNavOpen(false)} className="text-white">Membros</a>
                </li>
             </ul>
             <div className="flex justify-center pt-12">
