@@ -16,7 +16,7 @@ const Hamburger = () => {
          </div>
 
          {isNavOpen && (
-            <div className="fixed inset-0 bg-gray-400 opacity-75 z-20"></div>
+            <div className="fixed inset-0 bg-gray-600 opacity-75 z-20"></div>
          )}
 
          <div className={`absolute py-8 z-20 ${isNavOpen ? "flex flex-col col-span-1 h-screen w-screen" : "hidden"}`}>
