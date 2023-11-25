@@ -18,7 +18,7 @@ const eventImageGenerator = (image: string) => {
    } else {
       return (
          <div className="flex justify-center pb-7 xxsm:w-3/4 mx-auto">
-            <img src={image} alt="Logo evento" />
+            <img src={image} alt="Logo evento" className=""/>
          </div>
       );
    
