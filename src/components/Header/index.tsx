@@ -4,7 +4,7 @@ import { MdEvent } from "react-icons/md";
 import { IoPeopleSharp } from "react-icons/io5";
 import Hamburger from "../Hamburger";
 import epciconsemfundo from '../../Assets/epc-icon-semfundo.png';
-import logo from '../../Assets/Logo.svg';
+import logo from '../../Assets/logo2.svg';
 
 export const refs = [
    {
@@ -37,12 +37,12 @@ const Header = () => {
             <img src={epciconsemfundo} alt="Logo da EPC" className="w-11 mr-2 " />
          </div>
          <div className="hidden lg:flex items-center justify-between fixed bg-gray-200 w-3/4 z-10 rounded-xl">
-            <div className="flex items-center gap-7 ml-10 py-3">
-               <img src={logo} alt="Logo da EPC" />
+            <div className="flex items-center gap-7 ml-10 py-2">
+               <img src={logo} alt="Logo da EPC" className="w-3/12 pb-2" />
             </div>
             <div className="flex gap-24 font-semibold text-xl mr-10">
                {refs.map((ref) => (
-                  <a href={ref.href} className="hover:text-gray-500">
+                  <a href={ref.href} className="hover:text-gray-500 whitespace-nowrap">
                      {ref.title}
                   </a>
                ))}

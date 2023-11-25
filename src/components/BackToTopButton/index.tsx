@@ -1,4 +1,5 @@
 import { ConfigProvider, FloatButton } from 'antd';
+import { ArrowUpOutlined } from '@ant-design/icons';
 
 const BackToTopButton = () => {
    return (
@@ -13,8 +14,8 @@ const BackToTopButton = () => {
             },
          }}
       >
-         <div className="invisible xsm:visible">
-            <FloatButton.BackTop shape='circle' />
+         <div className="">
+            <FloatButton.BackTop shape='circle' icon={<ArrowUpOutlined style={{ color: 'black' }} />} />
          </div>
       </ConfigProvider>
    );

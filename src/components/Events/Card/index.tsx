@@ -18,10 +18,10 @@ const eventImageGenerator = (image: string) => {
    } else {
       return (
          <div className="flex justify-center pb-7 xxsm:w-3/4 mx-auto">
-            <img src={image} alt="Logo evento" className=""/>
+            <img src={image} alt="Logo evento" className="" />
          </div>
       );
-   
+
    }
 };
 
@@ -73,13 +73,27 @@ const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardPr
                />
             </p>
             <div className="flex justify-center">
-               <button className="text-base bg-sky-500 rounded-md" style={{ padding: '0.1rem 0.5rem 0.1rem 0.5rem' }} onClick={() => window.open(EventSiteLink, "_blank")}>
-                  Saiba Mais
-               </button>
+               <Botao EventSiteLink={EventSiteLink} />
             </div>
          </div>
       </div>
    );
+};
+
+const Botao = ({ EventSiteLink }: { EventSiteLink: string }) => {
+   if (EventSiteLink === "" || EventSiteLink === undefined || EventSiteLink === null || EventSiteLink === " ") {
+      return (
+         <button className="text-base bg-sky-500 rounded-md cursor-not-allowed" style={{ padding: '0.1rem 0.5rem 0.1rem 0.5rem' }} disabled>
+            Inscreva-se
+         </button>
+      );
+   } else {
+      return (
+         <button className="text-base bg-sky-500 rounded-md" style={{ padding: '0.1rem 0.5rem 0.1rem 0.5rem' }} onClick={() => window.open(EventSiteLink, "_blank")}>
+            Inscreva-se
+         </button>
+      );
+   }
 };
 
 export default Card;
