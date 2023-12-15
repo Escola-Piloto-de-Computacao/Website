@@ -1,28 +1,27 @@
+import React from 'react';
 import Card from './Card';
-import capcomlogo from '../../Assets/CapcomLogo.png';
+import capcomlogo from '../../images/Capcomlogo.png';
 import wtcclogo from '../../Assets/WTCClogo.svg';
-import lollogo from '../../Assets/LOLlogo.png';
-
-//TODO fix the websites links
+//import lollogo from '../../Assets/LOLlogo.png';
 
 const eventos = [
-   {
+   /*{
       NameEvent: "CAPCOM",
       DescriptionEvent: "A Semana de Capacitação em Computação da Ufersa promove minicursos de extensão para alunos da UFERSA. Os cursos abrangem tecnologias essenciais, ministrados em sua maioria por alunos do curso. As aulas acontecerão de 29 de novembro a 01 de dezembro, das 14:00PM às 18:00PM, visando complementar a formação dos estudantes. Os tópicos incluem Web Development, Unity, Git, Laravel, PowerBI, Python, R, e Robótica. Essa iniciativa visa enriquecer o conhecimento dos alunos e proporcionar experiência em ensino. Junte-se a nós para adentrar mais ainda no mundo de ciência da computação!",
       ImageEvent: capcomlogo,
       EventSiteLink: "https://capcom.escolapilotodecomputacao.com.br.com.br/",
-   },
+   },*/
    {
       NameEvent: "WTCC IX",
-      DescriptionEvent: "O Workshop Técnico-Científico de Computação visa despertar e estimular o interesse dos estudantes de graduação e de Pós-Graduação em Computação na pesquisa científica sobre temas relacionados à ciência da computação. Assim como discutir temas atuais da área que são importantes tanto para estudantes quanto para profissionais de computação.",
+      DescriptionEvent: "O Workshop Técnico-Científico de Computação visa despertar e estimular o interesse dos estudantes de Graduação e de Pós-Graduação em Computação na pesquisa científica sobre temas relacionados à ciência da computação. Assim como discutir temas atuais da área que são importantes tanto para estudantes quanto para profissionais de computação.",
       ImageEvent: wtcclogo,
       EventSiteLink: "",
    },
    {
       NameEvent: "2º Campeonato de LOL",
-      DescriptionEvent: "em breve...",
-      ImageEvent: "",
-      EventSiteLink: "",
+      DescriptionEvent: "A segunda edição do Campeonato de League of Legends, uma emocionante competição organizada pelo Projeto Escola Piloto (EPC) da UFERSA! Este evento foi especialmente criado para os alunos da UFERSA que estão matriculados em disciplinas relacionadas à tecnologia e desejam mostrar suas habilidades no mundo do gaming. Nessa edição, diferente de sua predecessora será realizada na modalidade de duplas,  no modo Arena (2 vs 2 vs 2 vs 2)!",
+      ImageEvent: "", //lollogo
+      EventSiteLink: "https://docs.google.com/forms/d/e/1FAIpQLScdDxOBbu59MfGuhP4GYAmjSN5D-sImO0HL6yAKF9nKu7GQ8g/viewform?usp=sf_link",
    }
 ]
 

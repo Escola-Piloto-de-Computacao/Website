@@ -1,3 +1,4 @@
+import React from "react";
 import { MdEmail } from "react-icons/md";
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import pedro from '../../Assets/MemberPhotos/pedroReact.jpeg'
