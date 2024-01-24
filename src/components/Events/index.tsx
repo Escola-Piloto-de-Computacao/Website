@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './Card';
-import capcomlogo from '../../images/Capcomlogo.png';
+//import capcomlogo from '../../images/Capcomlogo.png';
 import wtcclogo from '../../Assets/WTCClogo.svg';
-//import lollogo from '../../Assets/LOLlogo.png';
+//import lollogo from '../../Assets/CAMP.png';
 
 const eventos = [
    /*{
@@ -17,12 +17,12 @@ const eventos = [
       ImageEvent: wtcclogo,
       EventSiteLink: "",
    },
-   {
+   /*{
       NameEvent: "2º Campeonato de LOL",
       DescriptionEvent: "A segunda edição do Campeonato de League of Legends, uma emocionante competição organizada pelo Projeto Escola Piloto (EPC) da UFERSA! Este evento foi especialmente criado para os alunos da UFERSA que estão matriculados em disciplinas relacionadas à tecnologia e desejam mostrar suas habilidades no mundo do gaming. Nessa edição, diferente de sua predecessora será realizada na modalidade de duplas,  no modo Arena (2 vs 2 vs 2 vs 2)!",
-      ImageEvent: "", //lollogo
+      ImageEvent: lollogo,
       EventSiteLink: "https://docs.google.com/forms/d/e/1FAIpQLScdDxOBbu59MfGuhP4GYAmjSN5D-sImO0HL6yAKF9nKu7GQ8g/viewform?usp=sf_link",
-   }
+   }*/
 ]
 
 const numEventos = eventos.length;
