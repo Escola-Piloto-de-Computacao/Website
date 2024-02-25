@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import LerMais from "./LerMais";
 
 interface CardProps {
@@ -26,8 +26,8 @@ const eventImageGenerator = (image: string) => {
 };
 
 const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardProps) => {
-   const [showFullDescription] = useState(false);
-   const [tamanhoMaxTexto, setTamanhoMaxTexto] = useState(230);
+   const [showFullDescription, setShowFullDescription] = useState(false);
+   const [tamanhoMaxTexto, setTamanhoMaxTexto] = useState(150);
 
    let shortenedDescription = EventDescription;
    if (EventDescription.length > tamanhoMaxTexto && !showFullDescription) {
@@ -45,9 +45,9 @@ const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardPr
    useEffect(() => {
       const changeMaxTextSize = () => {
          if (window.innerWidth < 800) {
-            setTamanhoMaxTexto(135);
+            setTamanhoMaxTexto(130);
          } else {
-            setTamanhoMaxTexto(230);
+            setTamanhoMaxTexto(150);
          }
       };
 
@@ -81,19 +81,19 @@ const Card = ({ EventName, EventDescription, ImageEvent, EventSiteLink }: CardPr
 };
 
 const Botao = ({ EventSiteLink }: { EventSiteLink: string }) => {
-   if (EventSiteLink === "" || EventSiteLink === undefined || EventSiteLink === null || EventSiteLink === " ") {
-      return (
-         <button className="text-base bg-sky-500 rounded-md cursor-not-allowed" style={{ padding: '0.1rem 0.5rem 0.1rem 0.5rem' }} disabled>
-            Inscreva-se
-         </button>
-      );
-   } else {
-      return (
-         <button className="text-base bg-sky-500 rounded-md" style={{ padding: '0.1rem 0.5rem 0.1rem 0.5rem' }} onClick={() => window.open(EventSiteLink, "_blank")}>
-            Inscreva-se
-         </button>
-      );
-   }
+   const isLinkValid = EventSiteLink && EventSiteLink.trim() !== "";
+   const buttonStyle = { padding: '0.1rem 0.5rem', width: '100px', height: '35px' };
+
+   return (
+      <button 
+         className={`text-base bg-sky-500 rounded-md ${isLinkValid ? '' : 'cursor-not-allowed'}`} 
+         style={buttonStyle} 
+         disabled={!isLinkValid} 
+         onClick={isLinkValid ? () => window.open(EventSiteLink, "_blank") : undefined}
+      >
+         Inscreva-se
+      </button>
+   );
 };
 
 export default Card;

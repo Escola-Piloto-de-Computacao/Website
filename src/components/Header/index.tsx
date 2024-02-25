@@ -1,3 +1,4 @@
+import React from "react";
 import { MdHome } from "react-icons/md";
 import { FaLightbulb } from "react-icons/fa6";
 import { MdEvent } from "react-icons/md";

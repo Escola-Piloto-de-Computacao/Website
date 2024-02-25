@@ -1,3 +1,4 @@
+import React from 'react';
 import { BsInstagram } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 import logom1 from '../../Assets/Logo_m1.svg';

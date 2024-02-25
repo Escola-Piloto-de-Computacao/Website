@@ -1,3 +1,4 @@
+import React from 'react';
 import team from '../../Assets/Team.svg';
 
 const Introduction = () => {
