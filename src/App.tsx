@@ -9,17 +9,17 @@ import BackToTopButton from "./components/BackToTopButton";
 
 function App() {
 
-   return (
-      <div className="" >
-         <Header />
-         <Introduction />
-         <AboutUs />
-         <Events />
-         <Members />
-         <Footer />
-         <BackToTopButton />
-      </div>
-   );
+    return (
+        <div className="" >
+            <Header />
+            <Introduction />
+            <AboutUs />
+            <Events />
+            <Members />
+            <Footer />
+            <BackToTopButton />
+        </div>
+    );
 }
 
 export default App;
