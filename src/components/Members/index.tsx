@@ -12,7 +12,7 @@ import rafael from '../../Assets/MemberPhotos/RafaelPHP.jpg';
 import artur from '../../Assets/MemberPhotos/ArturPyautoGui.png';
 import danielle from '../../Assets/MemberPhotos/Danielle.jpg';
 
-let membros = [
+const membros = [
     {
         nome: "Pedro Figueira",
         cargo: "",
